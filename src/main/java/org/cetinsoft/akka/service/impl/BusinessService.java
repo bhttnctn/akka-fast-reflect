@@ -38,7 +38,7 @@ public class BusinessService implements IBusinessService {
 
 	@Override
 	public String skipFunction() {
-		String message = "Skip this function in testing";
+		String message = "This function added for skipping while testing with Mockito. This message should not seen in springInjectionTest !!!";
 		System.out.println(getClass().getSimpleName().concat(" = ").concat(message));
 		return message;
 	}

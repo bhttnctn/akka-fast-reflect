@@ -39,11 +39,12 @@ public class BusinessActor extends AbstractActorWithTimers {
 
 	public void handleAnyway(Object o) {
 
-		System.out.println(
-				getClass().getSimpleName().concat(" = ").concat("Spring Service doBusiness will call here !!!"));
+		System.out.println(getClass().getSimpleName().concat(" = ").concat(businessService.getClass().getSimpleName())
+				.concat(" = ").concat("Spring Service doBusiness will call here !!!"));
 		businessService.doBusiness("Service called in this line !!!");
 
-		System.out.println(getClass().getSimpleName().concat(" = ").concat("Service call skipFunction !!!"));
+		System.out.println(getClass().getSimpleName().concat(" = ").concat(businessService.getClass().getSimpleName())
+				.concat(" = ").concat("Service call skipFunction !!!"));
 		String skipFunctionMessage = businessService.skipFunction();
 
 		sender().tell(skipFunctionMessage, self());

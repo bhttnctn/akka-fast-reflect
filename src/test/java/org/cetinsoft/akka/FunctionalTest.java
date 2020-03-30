@@ -36,7 +36,7 @@ public class FunctionalTest {
 		FiniteDuration duration = Duration.create(200, TimeUnit.SECONDS);
 		Future<Object> result = ask(businessActor, "", Timeout.durationToTimeout(duration));
 		Object actualResultContent = Await.result(result, duration);
-		System.out.println("RESULT = " + actualResultContent);
+		System.out.println("FunctionalTest.businessServiceTest RESULT = " + actualResultContent);
 
 		System.out.println("businessServiceTest END !!!");
 	}
